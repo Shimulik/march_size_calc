@@ -1,8 +1,3 @@
-
-
-
-
-
 const SLOTS = ['helmet','chest','pants','boots','ring','weapon'];
 
 let userInstances = {};
@@ -31,8 +26,19 @@ function recomputeInherentBonus() {
   }
   inherentBonus = sum;
   const lbl = document.getElementById('bonusLabel');
-  if (lbl) lbl.textContent = inherentBonus ? `${(inherentBonus*100).toFixed(0)}% total bonus active` : 'No bonus';
+  if (lbl) {
+    lbl.textContent = inherentBonus
+      ? `${(inherentBonus * 100).toFixed(2)}% total bonus active`
+      : 'No bonus';
+  }
+
+  // If there's already a result shown, re-render it so the displayed bases update.
+  // We store the last payload on the compute step and re-render if present.
+  if (window.__lastRenderPayload) {
+    renderResult(window.__lastRenderPayload);
+  }
 }
+
 
 function toggleBonusButton(id) {
   const btn = document.getElementById(id);
@@ -273,11 +279,20 @@ resetBtn.addEventListener('click', ()=> {
 
 
 function renderResult(payload){
+  // cache payload so recomputeInherentBonus can re-render when bonuses change
+  window.__lastRenderPayload = payload;
+
   const { intervals, candidateCount, breakpointsCount } = payload;
+  const bonus = Number(inherentBonus) || 0;
   let html = `<div class="muted">Combos enumerated: ${candidateCount} · Breakpoints: ${breakpointsCount}</div>`;
 
   for (const it of intervals){
-    html += `<div class="winner-row"><div><strong>Base ${Math.round(it.from)} — ${it.to===null ? '∞' : Math.round(it.to)}</strong></div>`;
+    // apply bonus to the interval lower/upper bounds
+    const fromAdj = (typeof it.from === 'number') ? it.from * (1 + bonus) : null;
+    const toAdj = (typeof it.to === 'number') ? it.to * (1 + bonus) : null;
+
+    html += `<div class="winner-row"><div><strong>Base ${Math.round(fromAdj)} — ${toAdj===null ? '∞' : Math.round(toAdj)}</strong></div>`;
+    html += `<div class="muted" style="margin-top:6px">Displayed base includes ${(bonus*100).toFixed(2)}% active bonus</div>`;
     html += '<div style="margin-top:8px">';
 
     for (const s of SLOTS){
@@ -297,6 +312,7 @@ function renderResult(payload){
 
   outputEl.innerHTML = html;
 }
+
 
 initScenarioOptions();
 ensureUserInstances();
