@@ -1,3 +1,8 @@
+
+
+
+
+
 const SLOTS = ['helmet','chest','pants','boots','ring','weapon'];
 
 let userInstances = {};
