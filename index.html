@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Solver Example</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="wrap">
+    <h2>March Size Calculator</h2>
+
+    <div class="controls">
+      <label>Scenario
+        <select id="scenario"></select>
+      </label>
+
+      <button id="computeBtn">Compute</button>
+      <button id="resetBtn" class="secondary">Reset</button>
+      <button id="keep8">Keep-8%</button>
+      <button id="waif6">Waif-6%</button>
+    </div>
+
+    <div class="grid" id="slotsGrid"></div>
+
+    <div id="output"></div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

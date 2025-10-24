@@ -1,0 +1,236 @@
+:root {
+  --bg: #0b0f12;
+  --panel: #0f1619;
+  --muted-panel: #1f252c;
+  --card: #0f1417;
+  --text: #e6eef3;
+  --muted: #c9d8da;
+  --accent: #2e7d32;        
+  --accent-strong: #1b5e20;
+  --border: rgba(255,255,255,0.06);
+  --chip-on-surface: rgba(255,255,255,0.03);
+  --chip-border: rgba(255,255,255,0.06);
+  --winner-left: rgba(46,125,50,0.14);
+  --shadow-strong: rgba(0,0,0,0.6);
+}
+
+
+:root, html, body {
+  box-sizing: border-box;
+}
+*, *::before, *::after { box-sizing: inherit; }
+
+body{
+  margin:18px;
+  background: linear-gradient(180deg, #071011 0%, var(--bg) 100%);
+  color: var(--text);
+  font-family: system-ui, "Segoe UI", Roboto, Arial;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+.wrap{
+  max-width:1100px;
+  margin:0 auto;
+  background: linear-gradient(180deg, var(--panel), var(--muted-panel));
+  border-radius:10px;
+  padding:18px;
+  box-shadow:0 8px 30px var(--shadow-strong);
+}
+
+
+h2{ margin:4px 0 12px; color:var(--text); }
+.muted{ color:var(--muted); font-size:13px; }
+.mono{ font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", monospace; font-size:13px; color:var(--text); }
+
+
+.controls{ display:flex; gap:8px; align-items:center; margin:10px 0 14px; }
+
+select, input, button {
+  font-size:13px;
+  padding:8px;
+  border-radius:8px;
+  border:1px solid var(--border);
+  background: rgba(255,255,255,0.02);
+  color:var(--text);
+}
+
+
+button{
+  background: var(--accent);
+  color: #fff;
+  border: 0;
+  cursor:pointer;
+  box-shadow: 0 6px 18px rgba(46,125,50,0.12);
+  border-radius:10px;
+  padding:8px 12px;
+}
+button.secondary{
+  background: rgba(46,125,50,0.12);
+  color: var(--text);
+  border-color: var(--border);
+}
+
+
+.grid{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+@media (max-width:880px){ .grid{ grid-template-columns:1fr } }
+
+.slot-card{
+  border:1px solid rgba(255,255,255,0.02);
+  padding:12px;
+  border-radius:10px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  color:var(--text);
+}
+.slot-header{ display:flex; justify-content:space-between; align-items:center; margin-bottom:8px; color:var(--text); }
+.slot-label{ font-size:11px; color:var(--text); opacity:0.7; margin-right:6px; }
+.winner-row{
+  padding:8px;
+  border-radius:8px;
+  background: linear-gradient(90deg, rgba(46,125,50,0.04), rgba(255,255,255,0.01));
+  border-left:4px solid var(--winner-left);
+  margin-bottom:8px;
+}
+
+
+.chip{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:6px 10px;
+  border-radius:999px;
+  color:var(--text);
+  font-weight:600;
+  margin:6px 6px 6px 0;
+  cursor:pointer;
+  border:1px solid var(--chip-border);
+  background: var(--chip-on-surface);
+}
+.chips-row{ display:flex; flex-wrap:wrap; gap:6px; margin-top:10px; }
+.chip .rarity-badge{ font-size:11px; opacity:0.8; padding:2px 6px; border-radius:6px; background: rgba(10, 10, 10, 0.217); margin-left:6px; color:var(--muted); }
+
+
+.chip-rarity-Poor{        background:#adabab; color:#e6eef3; border-color:rgba(255,255,255,0.04) }
+.chip-rarity-Common{      background:#508920; color:#e6eef3; border-color:rgba(46,125,50,0.10) }
+.chip-rarity-Fine{        background:#215d8d; color:#e6eef3; border-color:rgba(46,125,50,0.12) }
+.chip-rarity-Exquisite{   background:#91298d; color:#e6eef3; border-color:rgba(255,193,7,0.10) }
+.chip-rarity-Epic{        background:#b0561d; color:#e6eef3; border-color:rgba(138,43,226,0.10) }
+.chip-rarity-Legendary{   background:#b19827; color:#e6eef3; border-color:rgba(255,140,0,0.12) }
+
+
+.combo-chips{ display:flex; flex-wrap:wrap; gap:6px; }
+
+
+@media (max-width:880px){ .grid{ grid-template-columns:1fr } }
+
+
+
+select,
+select:focus,
+select:hover {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #0f1417;      
+  color: var(--text);             
+  border: 1px solid var(--border);
+  padding-right: 36px;            
+  background-image:
+    linear-gradient(180deg, transparent 0%, transparent 100%),
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8' fill='none'><path d='M1 1.2L6 6.2L11 1.2' stroke='%232e7d32' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+  background-repeat: no-repeat, no-repeat;
+  background-position: right 12px center, right 12px center;
+  background-size: 12px 8px, 12px 8px;
+  border-radius: 8px;
+  transition: box-shadow .12s ease, border-color .12s ease;
+}
+
+
+select::-ms-expand { display: none; }
+
+
+.controls select {
+  background-color: rgba(255,255,255,0.02);
+  border: 1px solid var(--border);
+}
+
+
+select option,
+option {
+  background-color: #0f1417;
+  color: var(--text);
+}
+
+
+select optgroup,
+optgroup {
+  color: #cfe1df;
+  background-color: #0b1213;
+}
+
+
+select:focus {
+  outline: 2px solid rgba(46,125,50,0.18);
+  outline-offset: 2px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+}
+
+
+select[multiple], select[size] {
+  background-color: #0f1417;
+  color: var(--text);
+  border-radius:6px;
+}
+
+
+select option:hover { background: rgba(46,125,50,0.08); }
+
+
+@-moz-document url-prefix() {
+  select, option { color: var(--text); background: #0f1417; }
+}
+
+
+select::-webkit-dropdown-button { display: none; }
+
+
+select:focus {
+  box-shadow:
+    0 6px 18px rgba(0,0,0,0.6),
+    0 0 0 4px rgba(46,125,50,0.04) inset;
+}
+
+
+select[aria-invalid="true"] {
+  outline: 2px solid rgba(255, 82, 82, 0.18);
+  border-color: rgba(255, 82, 82, 0.35);
+}
+
+
+.slot-label, .chip .rarity-badge { font-weight:600; }
+
+
+button.active {
+  box-shadow: 0 6px 20px rgba(46,125,50,0.22);
+  background: var(--accent-strong);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+
+
+#computeBtn.active,
+#computeBtn:active {
+  background: var(--accent-strong);
+  box-shadow: 0 8px 28px rgba(46,125,50,0.26);
+  transform: translateY(-1px);
+  transition: box-shadow .12s ease, transform .06s ease, background .12s ease;
+}
+
+
+#computeBtn[disabled] {
+  opacity: 0.6;
+  cursor: default;
+  filter: saturate(0.9) brightness(.95);
+}
