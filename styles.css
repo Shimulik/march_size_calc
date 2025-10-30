@@ -324,7 +324,7 @@ button.ghost { background: transparent; border: none; color: var(--muted); }
 .output-piece.r-fine { background: #215d8d; color: #ffffff; }
 .output-piece.r-exquisite { background: #91298d; color: #ffffff; }
 .output-piece.r-epic { background: #b0561d; color: #ffffff; }
-.output-piece.r-legendary { background: #5c5844; color: #ffffff; }
+.output-piece.r-legendary { background: #b19827; color: #ffffff; }
 
 .output-detail .chips { gap: 8px; align-items: center; }
 
@@ -354,3 +354,4 @@ exp {
   color: #ffffff2e;
   font-size: small;
 }
+
