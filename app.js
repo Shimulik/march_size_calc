@@ -1,6 +1,11 @@
 const LEVELS = [40,45,50];
 const RARITIES = ["poor","common","fine","exquisite","epic","legendary"];
-const SLOTS_ORDER = ["helmet","chest","pants","boots","ring","weapon"];
+
+const LARGE_SLOTS_ORDER = ["helmet","weapon","chest","ring","pants","boots"];
+const SMALL_SLOTS_ORDER = ["helmet","chest","pants","boots","ring","weapon"];
+
+let SLOTS_ORDER = window.matchMedia('(max-width:880px)').matches ? SMALL_SLOTS_ORDER : LARGE_SLOTS_ORDER;
+
 const SITUATION_CONFIG = {
     "vs SOP":                 { flat_keys: ["base","vs SOP","vs P"],             percent_keys: ["Percent"]},
     "vs SOP with Drag":       { flat_keys: ["base","Dragon","vs SOP","vs P"],    percent_keys: ["Percent"]},
@@ -734,4 +739,5 @@ if (resetBtn) resetBtn.addEventListener('click', ()=> { state.NEXT_ID = 1; initS
 initState();
 populateScenarioSelect();
 renderAllSlots();
+
 
