@@ -131,7 +131,7 @@ const MATRICES = {
 const TEMPLATES = {
     helmet: [
         {name: "Empty",                             mapping: {base: null,              "vs P": null,             Percent: null,                      Dragon: null,          "vs SOP": null,              Rein: null}},
-        {name: "13 | NEW",                          mapping: {base: "base_13",         "vs P": null,             Percent: null,                      Dragon: null,          "vs SOP": null,              Rein: null}},
+        {name: "13 | Valorous Kingsguard",          mapping: {base: "base_13",         "vs P": null,             Percent: null,                      Dragon: null,          "vs SOP": null,              Rein: null}},
         {name: "12 | Sun Dornish",                  mapping: {base: null,              "vs P": null,             Percent: null,                      Dragon: null,          "vs SOP": null,              Rein: "rein_12"}},
         {name: "12 | Golden Rose",                  mapping: {base: null,              "vs P": null,             Percent: "percent_12",              Dragon: "drag_12",     "vs SOP": null,              Rein: null}},
         {name: "12 | Frost Thenn",                  mapping: {base: null,              "vs P": null,             Percent: null,                      Dragon: null,          "vs SOP": "sop_12",          Rein: null}},
@@ -151,7 +151,7 @@ const TEMPLATES = {
     ],
     chest: [
         {name: "Empty",                             mapping: {base: null,              "vs P": null,             Percent: null,                      Dragon: null,          "vs SOP": null,              Rein: null}},
-        {name: "13 | NEW",                          mapping: {base: null,              "vs P": null,             Percent: "percent_13",              Dragon: null,          "vs SOP": null,              Rein: null}},
+        {name: "13 | Valorous Kingsguard",          mapping: {base: null,              "vs P": null,             Percent: "percent_13",              Dragon: null,          "vs SOP": null,              Rein: null}},
         {name: "12 | Sun Dornish",                  mapping: {base: null,              "vs P": null,             Percent: null,                      Dragon: null,          "vs SOP": null,              Rein: "rein_12"}},
         {name: "12 | Golden Rose",                  mapping: {base: null,              "vs P": null,             Percent: null,                      Dragon: "drag_125",    "vs SOP": null,              Rein: null}},
         {name: "12 | Frost Thenn",                  mapping: {base: null,              "vs P": null,             Percent: "percent_12",              Dragon: null,          "vs SOP": null,              Rein: null}},
@@ -170,7 +170,7 @@ const TEMPLATES = {
     ],
     pants: [
         {name: "Empty",                             mapping: {base: null,              "vs P": null,             Percent: null,                      Dragon: null,          "vs SOP": null,              Rein: null}},
-        {name: "13 | NEW",                          mapping: {base: null,              "vs P": null,             Percent: "percent_13",              Dragon: null,          "vs SOP": null,              Rein: null}},
+        {name: "13 | Valorous Kingsguard",          mapping: {base: null,              "vs P": null,             Percent: "percent_13",              Dragon: null,          "vs SOP": null,              Rein: null}},
         {name: "12 | Sun Dornish",                  mapping: {base: "base_12",         "vs P": null,             Percent: null,                      Dragon: null,          "vs SOP": null,              Rein: null}},
         {name: "12 | Golden Rose",                  mapping: {base: null,              "vs P": null,             Percent: null,                      Dragon: "drag_125",    "vs SOP": null,              Rein: null}},
         {name: "12 | Frost Thenn",                  mapping: {base: null,              "vs P": null,             Percent: "percent_12",              Dragon: null,          "vs SOP": null,              Rein: null}},
@@ -188,7 +188,7 @@ const TEMPLATES = {
     ],
     boots: [
         {name: "Empty",                             mapping: {base: null,              "vs P": null,             Percent: null,                      Dragon: null,          "vs SOP": null,              Rein: null}},
-        {name: "13 | NEW",                          mapping: {base: "base_13",         "vs P": null,             Percent: null,                      Dragon: null,          "vs SOP": null,              Rein: null}},
+        {name: "13 | Valorous Kingsguard",          mapping: {base: "base_13",         "vs P": null,             Percent: null,                      Dragon: null,          "vs SOP": null,              Rein: null}},
         {name: "12 | Sun Dornish",                  mapping: {base: null,              "vs P": null,             Percent: null,                      Dragon: null,          "vs SOP": null,              Rein: "rein_12"}},
         {name: "12 | Golden Rose",                  mapping: {base: null,              "vs P": null,             Percent: "percent_12",              Dragon: "drag_12",     "vs SOP": null,              Rein: null}},
         {name: "12 | Frost Thenn",                  mapping: {base: null,              "vs P": null,             Percent: null,                      Dragon: null,          "vs SOP": "sop_12",          Rein: null}},
@@ -209,7 +209,7 @@ const TEMPLATES = {
     ],
     ring: [
         {name: "Empty",                             mapping: {base: null,              "vs P": null,             Percent: null,                      Dragon: null,          "vs SOP": null,              Rein: null}},
-        {name: "13 | NEW",                          mapping: {base: null,              "vs P": null,             Percent: "percent_13",              Dragon: null,          "vs SOP": null,              Rein: null}},
+        {name: "13 | Valorous Kingsguard",          mapping: {base: null,              "vs P": null,             Percent: "percent_13",              Dragon: null,          "vs SOP": null,              Rein: null}},
         {name: "12 | Sun Dornish",                  mapping: {base: "base_12",         "vs P": null,             Percent: null,                      Dragon: null,          "vs SOP": null,              Rein: null}},
         {name: "12 | Golden Rose",                  mapping: {base: null,              "vs P": null,             Percent: "percent_12",              Dragon: "drag_12",     "vs SOP": null,              Rein: null}},
         {name: "12 | Frost Thenn",                  mapping: {base: null,              "vs P": null,             Percent: null,                      Dragon: null,          "vs SOP": "sop_12",          Rein: null}},
@@ -228,7 +228,7 @@ const TEMPLATES = {
     ],
     weapon: [
         {name: "Empty",                             mapping: {base: null,              "vs P": null,             Percent: null,                      Dragon: null,          "vs SOP": null,              Rein: null}},
-        {name: "13 | NEW",                          mapping: {base: null,              "vs P": null,             Percent: "percent_135",              Dragon: null,          "vs SOP": null,              Rein: null}},
+        {name: "13 | Valorous Kingsguard",          mapping: {base: null,              "vs P": null,             Percent: "percent_135",              Dragon: null,          "vs SOP": null,              Rein: null}},
         {name: "12 | Sun Dornish",                  mapping: {base: "base_12",         "vs P": null,             Percent: null,                      Dragon: null,          "vs SOP": null,              Rein: null}},
         {name: "12 | Golden Rose",                  mapping: {base: null,              "vs P": null,             Percent: null,                      Dragon: "drag_125",    "vs SOP": null,              Rein: null}},
         {name: "12 | Frost Thenn",                  mapping: {base: null,              "vs P": null,             Percent: "percent_12",              Dragon: null,          "vs SOP": null,              Rein: null}},
