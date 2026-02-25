@@ -3,65 +3,196 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Gear Optimizer — Chips UI</title>
+  <title>Shim's March Size Gear Calculator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="container">
-    <div class="card">
-      <h3>Shim's March Size Gear Calculator</h3>
-      <exp>
-        <u>How to run the code:</u><br>
-        Step 1: Choose your scenario, this is the aspect of the game you need your march size for.<br>
-        Step 2: Click the options that apply; do you have the 8% ms from the keep? do you have waif?<br>
-        Step 3: Select all your pertinent march size pieces for each slot.<br>
-        Step 4: Click the Run button.
-        <div></div>
-        <br>
-      </exp>
 
-      <div class="controls">
-        <label>Scenario</label>
-        <select id="scenarioSelect"></select>
+  <div class="app-shell">
 
-        <button id="runBtn">Run</button>
-        <button id="resetBtn" class="secondary">Reset</button>
-
-        <button id="toggle8" class="toggle">+8.00% Keep</button>
-        <button id="toggle6p56" class="toggle">+6.56% Waif</button>
-
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">
+        <div class="logo-text">
+          <div class="logo-title">Shim's</div>
+          <div class="logo-sub">March Size Optimizer</div>
+        </div>
       </div>
 
-      <div style="margin-bottom:8px;" class="small">Current inherent boost: <span id="inherentDisplay">0.00%</span></div>
+      <nav class="sidebar-nav">
+        <button class="nav-item active" data-view="builder" onclick="switchView('builder')">
+          Builder
+        </button>
+        <button class="nav-item" data-view="compare" onclick="switchView('compare')">
+          Compare
+        </button>
+        <button class="nav-item" data-view="saves" onclick="switchView('saves')">
+          Saved Builds
+        </button>
+      </nav>
 
-      <div class="slots" id="slotsContainer"></div>
+      <div class="sidebar-section">
+        <div class="section-label">SCENARIO</div>
+        <select id="scenarioSelect" class="sidebar-select"></select>
+      </div>
 
-      <div>
-        <h3 style="font-size:15px">Output</h3>
-        <exp>
-          <u>How to read the output:</u><br>
-          Step 1: (In game) select your march size preset.<br>
-          Step 2: (In game) Unequip the helmet, chest, pants, boots, ring, and weapon.<br>
-          Step 3: (In game) Check your march size from the marching screen.<br>
-          Step 4: Click the output that contains your march size in its range.<br>
-          Step 5: This is the suggested gear combination for you.
-          <div></div>
-          <br>
-        </exp>
-        <div class="output-actions">
-            <div style="margin-left:auto" class="small" id="outputSummary">No results</div>
+      <div class="sidebar-section">
+        <div class="section-label">ACTIVE BONUSES</div>
+        <button id="toggle8" class="toggle-pill">+8.00% Keep</button>
+        <button id="toggle6p56" class="toggle-pill">+6.56% Waif</button>
+        <div class="inherent-row">
+          <span class="inherent-lbl">Total inherent</span>
+          <span id="inherentDisplay" class="inherent-val">0.00%</span>
+        </div>
+      </div>
+
+      <div class="sidebar-actions">
+        <button id="runBtn" class="btn-primary">▶ Run</button>
+        <button id="resetBtn" class="btn-ghost">↺ Reset</button>
+      </div>
+
+      <div class="sidebar-section save-section">
+        <div class="section-label">SAVE BUILD</div>
+        <div class="save-row">
+          <input type="text" id="buildNameInput" placeholder="Build name…" class="save-input" />
+          <button id="saveBuildBtn" class="btn-save">Save</button>
+        </div>
+      </div>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main-content">
+
+      <!-- BUILDER VIEW -->
+      <div id="view-builder" class="view active">
+        <div class="view-header">
+          <div>
+            <h1 class="view-title">Gear Builder</h1>
+            <p class="view-desc">Add gear pieces per slot, then hit Run to find optimal builds.</p>
+          </div>
+          <details class="how-to">
+            <summary>How to use</summary>
+            <ol>
+              <li>Select your <strong>Scenario</strong> and any active bonuses in the sidebar.</li>
+              <li>For each slot, click <strong>+ Add Piece</strong> and select your gear, add your best regular piece and your best prcent piece.</li>
+              <li>Click a chip to edit level &amp; rarity, or click ✕ to remove.</li>
+              <li>Hit <strong>Run</strong> to compute optimal combinations per base march range.</li>
+            </ol>
+          </details>
         </div>
 
-        <div id="outputArea" class="output-area">
-        </div>
-    </div>
-</div>
+        <div class="slots-grid" id="slotsContainer"></div>
 
+        <section class="output-section" id="outputSection">
+          <div class="output-hdr">
+            <h2 class="output-title">Results</h2>
+            <span id="outputSummary" class="output-meta">—</span>
+          </div>
+          <div class="march-finder">
+            <label class="march-finder-label" for="marchSizeInput">My march size</label>
+            <input type="number" id="marchSizeInput" class="march-finder-input" placeholder="e.g. 280000" min="0" />
+            <button id="marchFindBtn" class="march-finder-btn">Highlight</button>
+            <button id="marchClearBtn" class="march-finder-clear">Clear</button>
+          </div>
+          <details class="how-to" style="margin-bottom:16px">
+            <summary>How to read results</summary>
+            <ol>
+              <li>In-game: select your march size preset, then unequip the helmet, chest, pants, boots, ring, and weapon.</li>
+              <li>Check your base march size from the marching screen.</li>
+              <li>Find the row whose range contains your march size - that's your best build.</li>
+            </ol>
+          </details>
+          <div id="outputArea" class="output-area">
+            <div class="output-empty">Run a calculation to see results.</div>
+          </div>
+        </section>
+      </div>
+
+      <!-- COMPARE VIEW -->
+      <div id="view-compare" class="view">
+        <div class="view-header">
+          <div>
+            <h1 class="view-title">Piece Comparison</h1>
+            <p class="view-desc">Compare two pieces side-by-side across all stat categories.</p>
+          </div>
+        </div>
+        <div class="compare-panel" id="comparePanel">
+          <div class="compare-col" id="compareLeft">
+            <div class="compare-slot-picker">
+              <label class="section-label">SLOT</label>
+              <select id="compareSlotLeft" onchange="updateCompareSelects()"></select>
+            </div>
+            <div class="compare-piece-search">
+              <input type="text" placeholder="Search piece…" id="compareSearchLeft" oninput="filterComparePieces('left')" class="search-input" />
+            </div>
+            <div class="compare-piece-list" id="comparePieceListLeft"></div>
+            <div class="compare-options">
+              <label class="section-label">LEVEL</label>
+              <select id="compareLevelLeft" onchange="renderCompareStats()"></select>
+              <label class="section-label" style="margin-top:8px">RARITY</label>
+              <select id="compareRarityLeft" onchange="renderCompareStats()"></select>
+            </div>
+          </div>
+          <div class="compare-divider">VS</div>
+          <div class="compare-col" id="compareRight">
+            <div class="compare-slot-picker">
+              <label class="section-label">SLOT</label>
+              <select id="compareSlotRight" onchange="updateCompareSelects()"></select>
+            </div>
+            <div class="compare-piece-search">
+              <input type="text" placeholder="Search piece…" id="compareSearchRight" oninput="filterComparePieces('right')" class="search-input" />
+            </div>
+            <div class="compare-piece-list" id="comparePieceListRight"></div>
+            <div class="compare-options">
+              <label class="section-label">LEVEL</label>
+              <select id="compareLevelRight" onchange="renderCompareStats()"></select>
+              <label class="section-label" style="margin-top:8px">RARITY</label>
+              <select id="compareRarityRight" onchange="renderCompareStats()"></select>
+            </div>
+          </div>
+        </div>
+        <div id="compareStats" class="compare-stats"></div>
+      </div>
+
+      <!-- SAVES VIEW -->
+      <div id="view-saves" class="view">
+        <div class="view-header">
+          <div>
+            <h1 class="view-title">Saved Builds</h1>
+            <p class="view-desc">Load a previously saved build to restore all your gear selections.</p>
+          </div>
+        </div>
+        <div id="savedBuildsArea" class="saved-builds-area">
+          <div class="output-empty">No saved builds yet. Use the sidebar to save your current build.</div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- PIECE PICKER MODAL -->
+  <div id="piecePickerModal" class="modal-overlay" style="display:none" onclick="closePiecePickerOnOverlay(event)">
+    <div class="modal">
+      <div class="modal-header">
+        <div class="modal-title" id="modalTitle">Select Piece</div>
+        <button class="modal-close" onclick="closePiecePicker()">✕</button>
+      </div>
+      <div class="modal-search">
+        <input type="text" id="modalSearchInput" placeholder="Search by name…" oninput="filterModalPieces()" class="search-input" />
+      </div>
+      <div class="modal-grid" id="modalPieceGrid"></div>
     </div>
   </div>
 
+  <!-- EDIT CHIP POPOVER -->
   <div id="chipPopover" class="popover" style="display:none">
     <div class="popover-inner">
+      <div class="popover-header">
+        <img id="popoverImg" class="popover-img" src="" alt="" />
+        <div class="popover-piece-name" id="popoverPieceName">—</div>
+      </div>
       <div class="popover-row">
         <label>Template</label>
         <select id="popoverTemplate"></select>
@@ -76,8 +207,8 @@
       </div>
       <div class="popover-actions">
         <button id="popoverSave">Save</button>
-        <button id="popoverDelete" class="secondary">Delete</button>
-        <button id="popoverClose" class="ghost">Close</button>
+        <button id="popoverDelete" class="btn-ghost">Delete</button>
+        <button id="popoverClose" class="btn-ghost">Close</button>
       </div>
     </div>
   </div>
