@@ -74,8 +74,8 @@ html, body { height: 100%; margin: 0; font-family: var(--sans); font-size: 14px;
 .logo-sub { color: var(--sidebar-dim); font-size: 11px; letter-spacing: 0.04em; }
 
 .logo-icon img { 
-  width: 22px;
-  height: 22px; 
+  width: 60px;
+  height: 60px; 
   object-fit: contain; 
   display: block; }
 
@@ -1070,3 +1070,4 @@ html, body { height: 100%; margin: 0; font-family: var(--sans); font-size: 14px;
   font-family: var(--sans);
   line-height: 1;
 }
+
