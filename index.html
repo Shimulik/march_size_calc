@@ -93,12 +93,7 @@
             <h2 class="output-title">Results</h2>
             <span id="outputSummary" class="output-meta">—</span>
           </div>
-          <div class="march-finder">
-            <label class="march-finder-label" for="marchSizeInput">My march size</label>
-            <input type="number" id="marchSizeInput" class="march-finder-input" placeholder="e.g. 280000" min="0" />
-            <button id="marchFindBtn" class="march-finder-btn">Highlight</button>
-            <button id="marchClearBtn" class="march-finder-clear">Clear</button>
-          </div>
+          
           <details class="how-to" style="margin-bottom:16px">
             <summary>How to read results</summary>
             <ol>
@@ -107,6 +102,14 @@
               <li>Find the row whose range contains your march size - that's your best build.</li>
             </ol>
           </details>
+          
+          <div class="march-finder">
+            <label class="march-finder-label" for="marchSizeInput">My march size</label>
+            <input type="number" id="marchSizeInput" class="march-finder-input" placeholder="e.g. 280000" min="0" />
+            <button id="marchFindBtn" class="march-finder-btn">Highlight</button>
+            <button id="marchClearBtn" class="march-finder-clear">Clear</button>
+          </div>
+          
           <div id="outputArea" class="output-area">
             <div class="output-empty">Run a calculation to see results.</div>
           </div>
@@ -219,4 +222,5 @@
   <script src="app.js"></script>
 </body>
 </html>
+
 
