@@ -112,6 +112,11 @@ const MATRICES = {
     [11175,11973,12771,13569,14367,15964],
     [12280,13157,14034,14911,15788,17543]
   ],
+  drag_135: [
+    [5034,5394,5754,6113,6473,7192],
+    [5587,5986,6385,6784,7183,7982],
+    [6140,6578,7017,7455,7894,8771]
+    ],
   percent_11: [
     [0.0233097854976,0.024974770176,0.0266397548544,0.0283047395328,0.0299697242112,0.033299693568],
     [0.0258681765888,0.027715903488,0.0295636303872,0.0314113572864,0.0332590841856,0.036954537984],
@@ -167,6 +172,11 @@ const MATRICES = {
     [6984,7483,7982,8481,8979,9977],
     [7675,8223,8771,9319,9868,10964]
   ],
+  sop_13: [
+    [7552,8091,8631,9170,9710,10789],
+    [8381,8979,9578,10177,10775,11973],
+    [9210,9868,10525,11183,11841,13157]
+  ],
   vp_10: [
     [4370,4682,4994,5307,5619,6243],
     [4850,5196,5543,5889,6236,6928],
@@ -179,6 +189,7 @@ const MATRICES = {
 const TEMPLATES = {
     helmet: [
         {name: "Empty",                             mapping: {base: null,              "vs P": null,             Percent: null,                      Dragon: null,          "vs SOP": null,              Rein: null}},
+        {name: "13 | NEW",                          mapping: {base: null,              "vs P": null,             Percent: null,                      Dragon: "drag_135",    "vs SOP": "sop_13",          Rein: null}},
         {name: "13 | Hedge Knight",                 mapping: {base: "base_13",         "vs P": null,             Percent: null,                      Dragon: null,          "vs SOP": null,              Rein: null}},
         {name: "13 | Laughing Baratheon",           mapping: {base: "base_13",         "vs P": null,             Percent: null,                      Dragon: null,          "vs SOP": null,              Rein: null}},
         {name: "13 | Valorous Kingsguard",          mapping: {base: "base_13",         "vs P": null,             Percent: null,                      Dragon: null,          "vs SOP": null,              Rein: null}},
@@ -201,7 +212,8 @@ const TEMPLATES = {
     ],
     chest: [
         {name: "Empty",                             mapping: {base: null,              "vs P": null,             Percent: null,                      Dragon: null,          "vs SOP": null,              Rein: null}},
-        {name: "13 | Hedge Knight",                 mapping: {base: null,              "vs P": null,             Percent: "percent_135",            Dragon: null,          "vs SOP": null,              Rein: null}},
+        {name: "13 | NEW",                          mapping: {base: null,              "vs P": null,             Percent: null,                      Dragon: "drag_135",    "vs SOP": "sop_13",          Rein: null}},
+        {name: "13 | Hedge Knight",                 mapping: {base: null,              "vs P": null,             Percent: "percent_135",             Dragon: null,          "vs SOP": null,              Rein: null}},
         {name: "13 | Laughing Baratheon",           mapping: {base: null,              "vs P": null,             Percent: "percent_13",              Dragon: null,          "vs SOP": null,              Rein: null}},
         {name: "13 | Valorous Kingsguard",          mapping: {base: null,              "vs P": null,             Percent: "percent_13",              Dragon: null,          "vs SOP": null,              Rein: null}},
         {name: "12 | Sun Dornish",                  mapping: {base: null,              "vs P": null,             Percent: null,                      Dragon: null,          "vs SOP": null,              Rein: "rein_12"}},
@@ -222,6 +234,7 @@ const TEMPLATES = {
     ],
     pants: [
         {name: "Empty",                             mapping: {base: null,              "vs P": null,             Percent: null,                      Dragon: null,          "vs SOP": null,              Rein: null}},
+        {name: "13 | NEW",                          mapping: {base: null,              "vs P": null,             Percent: "percent_13",              Dragon: "drag_13",     "vs SOP": null,              Rein: null}},
         {name: "13 | Hedge Knight",                 mapping: {base: "base_13",         "vs P": null,             Percent: null,                      Dragon: null,          "vs SOP": null,              Rein: null}},
         {name: "13 | Laughing Baratheon",           mapping: {base: "base_13",         "vs P": null,             Percent: null,                      Dragon: null,          "vs SOP": null,              Rein: null}},
         {name: "13 | Valorous Kingsguard",          mapping: {base: null,              "vs P": null,             Percent: "percent_13",              Dragon: null,          "vs SOP": null,              Rein: null}},
@@ -242,6 +255,7 @@ const TEMPLATES = {
     ],
     boots: [
         {name: "Empty",                             mapping: {base: null,              "vs P": null,             Percent: null,                      Dragon: null,          "vs SOP": null,              Rein: null}},
+        {name: "13 | NEW",                          mapping: {base: null,              "vs P": null,             Percent: "percent_13",              Dragon: "drag_13",     "vs SOP": null,              Rein: null}},
         {name: "13 | Hedge Knight",                 mapping: {base: null,              "vs P": null,             Percent: "percent_13",              Dragon: null,          "vs SOP": null,              Rein: null}},
         {name: "13 | Laughing Baratheon",           mapping: {base: null,              "vs P": null,             Percent: "percent_13",              Dragon: null,          "vs SOP": null,              Rein: null}},
         {name: "13 | Valorous Kingsguard",          mapping: {base: "base_13",         "vs P": null,             Percent: null,                      Dragon: null,          "vs SOP": null,              Rein: null}},
@@ -265,6 +279,7 @@ const TEMPLATES = {
     ],
     ring: [
         {name: "Empty",                             mapping: {base: null,              "vs P": null,             Percent: null,                      Dragon: null,          "vs SOP": null,              Rein: null}},
+        {name: "13 | NEW",                          mapping: {base: null,              "vs P": null,             Percent: null,                      Dragon: "drag_135",    "vs SOP": "sop_13",          Rein: null}},
         {name: "13 | Hedge Knight",                 mapping: {base: null,              "vs P": null,             Percent: "percent_13",              Dragon: null,          "vs SOP": null,              Rein: null}},
         {name: "13 | Laughing Baratheon",           mapping: {base: null,              "vs P": null,             Percent: "percent_13",              Dragon: null,          "vs SOP": null,              Rein: null}},
         {name: "13 | Valorous Kingsguard",          mapping: {base: null,              "vs P": null,             Percent: "percent_13",              Dragon: null,          "vs SOP": null,              Rein: null}},
@@ -286,6 +301,7 @@ const TEMPLATES = {
     ],
     weapon: [
         {name: "Empty",                             mapping: {base: null,              "vs P": null,             Percent: null,                      Dragon: null,          "vs SOP": null,              Rein: null}},
+        {name: "13 | NEW",                          mapping: {base: null,              "vs P": null,             Percent: "percent_13",              Dragon: "drag_13",     "vs SOP": null,              Rein: null}},
         {name: "13 | Hedge Knight",                 mapping: {base: null,              "vs P": null,             Percent: "percent_13",              Dragon: null,          "vs SOP": null,              Rein: null}},
         {name: "13 | Laughing Baratheon",           mapping: {base: null,              "vs P": null,             Percent: "percent_135",             Dragon: null,          "vs SOP": null,              Rein: null}},
         {name: "13 | Valorous Kingsguard",          mapping: {base: null,              "vs P": null,             Percent: "percent_135",             Dragon: null,          "vs SOP": null,              Rein: null}},
