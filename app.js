@@ -194,6 +194,7 @@ const MATRICES = {
 const TEMPLATES = {
     helmet: [
         {name: "Empty",                             mapping: {base: null,              "vs P": null,             Percent: null,                      Dragon: null,          "vs SOP": null,              Rein: null}},
+        {name: "13 | Lion of the West",             mapping: {base: null,              "vs P": null,             Percent: "percent_13",              Dragon: null,          "vs SOP": null,              Rein: null}},
         {name: "13 | Sparrow",                      mapping: {base: "base_13",         "vs P": null,             Percent: null,                      Dragon: null,          "vs SOP": null,              Rein: null}},
         {name: "13 | Dothraki",                     mapping: {base: null,              "vs P": null,             Percent: null,                      Dragon: "drag_135",    "vs SOP": "sop_13",          Rein: null}},
         {name: "13 | Hedge Knight",                 mapping: {base: "base_13",         "vs P": null,             Percent: null,                      Dragon: null,          "vs SOP": null,              Rein: null}},
@@ -218,6 +219,7 @@ const TEMPLATES = {
     ],
     chest: [
         {name: "Empty",                             mapping: {base: null,              "vs P": null,             Percent: null,                      Dragon: null,          "vs SOP": null,              Rein: null}},
+        {name: "13 | Lion of the West",             mapping: {base: null,              "vs P": null,             Percent: null,                      Dragon: null,          "vs SOP": "sop_13",          Rein: null}},
         {name: "13 | Sparrow",                      mapping: {base: "base_13",         "vs P": null,             Percent: null,                      Dragon: null,          "vs SOP": null,              Rein: null}},
         {name: "13 | Dothraki",                     mapping: {base: null,              "vs P": null,             Percent: null,                      Dragon: "drag_135",    "vs SOP": "sop_13",          Rein: null}},
         {name: "13 | Hedge Knight",                 mapping: {base: null,              "vs P": null,             Percent: "percent_135",             Dragon: null,          "vs SOP": null,              Rein: null}},
@@ -241,6 +243,7 @@ const TEMPLATES = {
     ],
     pants: [
         {name: "Empty",                             mapping: {base: null,              "vs P": null,             Percent: null,                      Dragon: null,          "vs SOP": null,              Rein: null}},
+        {name: "13 | Lion of the West",             mapping: {base: null,              "vs P": null,             Percent: null,                      Dragon: null,          "vs SOP": "sop_13",          Rein: null}},
         {name: "13 | Sparrow",                      mapping: {base: null,              "vs P": null,             Percent: null,                      Dragon: null,          "vs SOP": null,              Rein: "rein_13"}},
         {name: "13 | Dothraki",                     mapping: {base: null,              "vs P": null,             Percent: "percent_13",              Dragon: "drag_13",     "vs SOP": null,              Rein: null}},
         {name: "13 | Hedge Knight",                 mapping: {base: "base_13",         "vs P": null,             Percent: null,                      Dragon: null,          "vs SOP": null,              Rein: null}},
@@ -263,6 +266,7 @@ const TEMPLATES = {
     ],
     boots: [
         {name: "Empty",                             mapping: {base: null,              "vs P": null,             Percent: null,                      Dragon: null,          "vs SOP": null,              Rein: null}},
+        {name: "13 | Lion of the West",             mapping: {base: null,              "vs P": null,             Percent: "percent_13",              Dragon: null,          "vs SOP": null,              Rein: null}},
         {name: "13 | Sparrow",                      mapping: {base: "base_13",         "vs P": null,             Percent: null,                      Dragon: null,          "vs SOP": null,              Rein: null}},
         {name: "13 | Dothraki",                     mapping: {base: null,              "vs P": null,             Percent: "percent_13",              Dragon: "drag_13",     "vs SOP": null,              Rein: null}},
         {name: "13 | Hedge Knight",                 mapping: {base: null,              "vs P": null,             Percent: "percent_13",              Dragon: null,          "vs SOP": null,              Rein: null}},
@@ -288,6 +292,7 @@ const TEMPLATES = {
     ],
     ring: [
         {name: "Empty",                             mapping: {base: null,              "vs P": null,             Percent: null,                      Dragon: null,          "vs SOP": null,              Rein: null}},
+        {name: "13 | Lion of the West",             mapping: {base: null,              "vs P": null,             Percent: null,                      Dragon: null,          "vs SOP": "sop_13",          Rein: null}},
         {name: "13 | Sparrow",                      mapping: {base: null,              "vs P": null,             Percent: null,                      Dragon: null,          "vs SOP": null,              Rein: "rein_13"}},
         {name: "13 | Dothraki",                     mapping: {base: null,              "vs P": null,             Percent: null,                      Dragon: "drag_135",    "vs SOP": "sop_13",          Rein: null}},
         {name: "13 | Hedge Knight",                 mapping: {base: null,              "vs P": null,             Percent: "percent_13",              Dragon: null,          "vs SOP": null,              Rein: null}},
@@ -311,6 +316,7 @@ const TEMPLATES = {
     ],
     weapon: [
         {name: "Empty",                             mapping: {base: null,              "vs P": null,             Percent: null,                      Dragon: null,          "vs SOP": null,              Rein: null}},
+        {name: "13 | Lion of the West",             mapping: {base: null,              "vs P": null,             Percent: "percent_13",              Dragon: null,          "vs SOP": null,              Rein: null}},
         {name: "13 | Sparrow",                      mapping: {base: null,              "vs P": null,             Percent: null,                      Dragon: null,          "vs SOP": null,              Rein: "rein_13"}},
         {name: "13 | Dothraki",                     mapping: {base: null,              "vs P": null,             Percent: "percent_13",              Dragon: "drag_13",     "vs SOP": null,              Rein: null}},
         {name: "13 | Hedge Knight",                 mapping: {base: null,              "vs P": null,             Percent: "percent_13",              Dragon: null,          "vs SOP": null,              Rein: null}},
