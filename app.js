@@ -214,6 +214,7 @@ const MATRICES = {
 const TEMPLATES = {
     helmet: [
         {name: "Empty",                             mapping: {base: null,              "vs P": null,             Percent: null,                      Dragon: null,          "vs SOP": null,              Rein: null}},
+        {name: "14 | Free Folk",                    mapping: {base: null,              "vs P": null,             Percent: "percent_145",             Dragon: null,          "vs SOP": null,              Rein: null}},
         {name: "14 | Dragonseed",                   mapping: {base: null,              "vs P": null,             Percent: "percent_145",             Dragon: null,          "vs SOP": null,              Rein: null}},
         {name: "13 | Lion of the West",             mapping: {base: null,              "vs P": null,             Percent: "percent_13",              Dragon: null,          "vs SOP": null,              Rein: null}},
         {name: "13 | Sparrow",                      mapping: {base: "base_13",         "vs P": null,             Percent: null,                      Dragon: null,          "vs SOP": null,              Rein: null}},
@@ -240,6 +241,7 @@ const TEMPLATES = {
     ],
     chest: [
         {name: "Empty",                             mapping: {base: null,              "vs P": null,             Percent: null,                      Dragon: null,          "vs SOP": null,              Rein: null}},
+        {name: "14 | Free Folk",                    mapping: {base: null,              "vs P": null,             Percent: "percent_14",              Dragon: null,          "vs SOP": null,              Rein: null}},  
         {name: "14 | Dragonseed",                   mapping: {base: null,              "vs P": null,             Percent: "percent_14",              Dragon: null,          "vs SOP": null,              Rein: null}},
         {name: "13 | Lion of the West",             mapping: {base: null,              "vs P": null,             Percent: null,                      Dragon: null,          "vs SOP": "sop_13",          Rein: null}},
         {name: "13 | Sparrow",                      mapping: {base: "base_13",         "vs P": null,             Percent: null,                      Dragon: null,          "vs SOP": null,              Rein: null}},
@@ -265,6 +267,7 @@ const TEMPLATES = {
     ],
     pants: [
         {name: "Empty",                             mapping: {base: null,              "vs P": null,             Percent: null,                      Dragon: null,          "vs SOP": null,              Rein: null}},
+        {name: "14 | Free Folk",                    mapping: {base: "base_145",        "vs P": null,             Percent: "percent_14",              Dragon: null,          "vs SOP": null,              Rein: null}},
         {name: "14 | Dragonseed",                   mapping: {base: null,              "vs P": null,             Percent: "percent_145",             Dragon: null,          "vs SOP": null,              Rein: null}},
         {name: "13 | Lion of the West",             mapping: {base: null,              "vs P": null,             Percent: null,                      Dragon: null,          "vs SOP": "sop_13",          Rein: null}},
         {name: "13 | Sparrow",                      mapping: {base: null,              "vs P": null,             Percent: null,                      Dragon: null,          "vs SOP": null,              Rein: "rein_13"}},
@@ -289,6 +292,7 @@ const TEMPLATES = {
     ],
     boots: [
         {name: "Empty",                             mapping: {base: null,              "vs P": null,             Percent: null,                      Dragon: null,          "vs SOP": null,              Rein: null}},
+        {name: "14 | Free Folk",                    mapping: {base: "base_14",         "vs P": null,             Percent: null,                      Dragon: null,          "vs SOP": null,              Rein: null}},
         {name: "14 | Dragonseed",                   mapping: {base: "base_14",         "vs P": null,             Percent: null,                      Dragon: null,          "vs SOP": null,              Rein: null}},
         {name: "13 | Lion of the West",             mapping: {base: null,              "vs P": null,             Percent: "percent_13",              Dragon: null,          "vs SOP": null,              Rein: null}},
         {name: "13 | Sparrow",                      mapping: {base: "base_13",         "vs P": null,             Percent: null,                      Dragon: null,          "vs SOP": null,              Rein: null}},
@@ -316,6 +320,7 @@ const TEMPLATES = {
     ],
     ring: [
         {name: "Empty",                             mapping: {base: null,              "vs P": null,             Percent: null,                      Dragon: null,          "vs SOP": null,              Rein: null}},
+        {name: "14 | Free Folk",                    mapping: {base: null,              "vs P": null,             Percent: "percent_14",              Dragon: null,          "vs SOP": null,              Rein: null}},
         {name: "14 | Dragonseed",                   mapping: {base: null,              "vs P": null,             Percent: "percent_14",             Dragon: null,          "vs SOP": null,              Rein: null}},
         {name: "13 | Lion of the West",             mapping: {base: null,              "vs P": null,             Percent: null,                      Dragon: null,          "vs SOP": "sop_13",          Rein: null}},
         {name: "13 | Sparrow",                      mapping: {base: null,              "vs P": null,             Percent: null,                      Dragon: null,          "vs SOP": null,              Rein: "rein_13"}},
@@ -341,6 +346,7 @@ const TEMPLATES = {
     ],
     weapon: [
         {name: "Empty",                             mapping: {base: null,              "vs P": null,             Percent: null,                      Dragon: null,          "vs SOP": null,              Rein: null}},
+        {name: "14 | Free Folk",                    mapping: {base: null,              "vs P": null,             Percent: "percent_145",             Dragon: null,          "vs SOP": null,              Rein: null}},
         {name: "14 | Dragonseed",                   mapping: {base: "base_145",        "vs P": null,             Percent: "percent_14",              Dragon: null,          "vs SOP": null,              Rein: null}},
         {name: "13 | Lion of the West",             mapping: {base: null,              "vs P": null,             Percent: "percent_13",              Dragon: null,          "vs SOP": null,              Rein: null}},
         {name: "13 | Sparrow",                      mapping: {base: null,              "vs P": null,             Percent: null,                      Dragon: null,          "vs SOP": null,              Rein: "rein_13"}},
